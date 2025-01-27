@@ -1,193 +1,54 @@
-*{
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans'sans-serif;
-}
-body {
-    height: 100vh;
-    background-color: rgb(27, 148, 148);
-    background-image: url('https://th.bing.com/th/id/R.9a2f5593031578554dc7e38e127304d5?rik=FDap2K5ahxZawQ&pid=ImgRaw&r=0');
-background-size: cover;
-background-position: center;
-}
-.hero{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgb(3, 46, 71);
-}
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: #000000;
-    font-size: 1rem;
-}
-a:hover{
-    color: rgb(245, 3, 253);
-}
-/* HEADER */
-header{
-    position: relative;
-    padding: 0 2rem;
+    background-color: #f4f4f4;
 }
 
-.navbar {
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar .logo a {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: rgba(0, 81, 255, 0.87);
-}
-
-.navbar .links {
-    display: flex;
-    gap: 3rem;
-}
-
-.navbar .toggle_btn {
-    color: rgb(117, 91, 91);
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-.action_btn {
-    background-color: rgb(199, 70, 11);
-    color: rgb(255, 255, 255);
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: scale 0.2 ease;
-}
-
-.action_btn:hover {
-    scale:  1.05;
-    color: rgb(73, 213, 238);
-}
-
-.action_btn:active {
-    scale: 0.95;
-    color: rgb(73, 213, 238);
-}
-
-/*DROPDOWN_MENU */
-.dropdown_menu {
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    height: 0;
-    width: 200px;
-    background-color: bisque;
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.dropdown_menu.open {
-height: 240px;
-}
-
-.dropdown_menu li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdown_menu .action_btn {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-/* HERO */
-section#hero {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
     text-align: center;
-    color: #531d1d;
-}
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-.media-icons{
-position:absolute;
-right: 50px;
-display: flex;
-flex-direction: column;
-transition: 0.5s ease;
-}
-.media-icons a{
-    color: black;
-    font-size: 1.5rem;
-    transition: 0.3s ease;
-}
-.media-icons a:not(:last-child){
-    margin-bottom: 20px;
-}
-.media-icons a:hover{
-    color: rgb(25, 117, 48);
-    transform: scale(1.5);
 }
 
-.media-icons1{
-    position:absolute;
-   left: 50px;
-    display: flex;
-    flex-direction: column;
-    transition: 0.5s ease;
-    }
-    .media-icons1 a{
-        color: black;
-        font-size: 1.5rem;
-        transition: 0.3s ease;
-    }
-    .media-icons1 a:not(:last-child){
-        margin-bottom: 20px;
-    }
-    .media-icons1 a:hover{
-        color: rgb(25, 117, 48);
-        transform: scale(1.5);
-    }
+nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-/*RESPONSIVE DESIZE*/
-@media (max-width:992px) {
-    .navbar .links,
-    .navbar .action_btn {
-        display: none;
-    }
-.navbar .toggle_btn {
-display: block;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
-.dropdown_menu {
-    display: block;
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
+
+.hero {
+    background-color: #009688;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
 }
-@media (max-width:576px) {
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
-    }
+
+.hero h1 {
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
